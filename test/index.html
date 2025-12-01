@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miles Blanc - Portfolio</title>
+  <style>
+    :root {
+      --purple: #800080;
+      --black: #0a0a0a;
+      --gray: #f5f5f5;
+    }
+
+    body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--black);
+  color: var(--gray);
+  margin: 0;
+  line-height: 2.0;
+  scroll-behavior: smooth;
+  font-size: 18px;
+}
+
+    html {
+      scroll-padding-top: 100px; /* match your header height */
+    }
+
+    /* --- HEADER STYLE --- */
+    header {
+      background: linear-gradient(90deg, #800080, #00ffff, #000);
+      background-size: 600% 600%;
+      animation: gradientShift 15s ease infinite;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 2px solid var(--purple);
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header h1 {
+      color: var(--purple);
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      color: var(--gray);
+      text-decoration: none;
+      margin: 0 10px;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      background: var(--purple);
+      color: #fff;
+    }
+
+    /* --- SECTION STYLE --- */
+    section {
+      padding: 80px 40px;
+      max-width: 1000px;
+      margin: 60px auto;
+      background-color: #111;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(128, 0, 128, 0.3);
+    }
+
+    h2 {
+      color: var(--purple);
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1.5s forwards;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* --- PROJECTS AS CARDS --- */
+    #projects ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+    }
+
+    #projects li {
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(128, 0, 128, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #projects li:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(128, 0, 128, 0.4);
+    }
+
+    /* --- BUTTON STYLE --- */
+    button {
+      display: block;
+      margin: 30px auto;
+      padding: 12px 25px;
+      border: none;
+      background: var(--purple);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px var(--purple);
+    }
+
+    /* --- FOOTER REDESIGN --- */
+    footer {
+      background: linear-gradient(90deg, #000, #800080);
+      color: #ccc;
+      padding: 25px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+section {
+      padding: 80px 40px;
+      max-width: 800px;
+      margin: 60px auto;
+      background-color: #111;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(128, 0, 128, 0.3);
+    }
+
+    /* Odd sections offset to the right */
+    section:nth-of-type(odd) {
+      margin-left: 15%;
+    }
+
+    /* Even sections offset to the left */
+    section:nth-of-type(even) {
+      margin-right: 15%;
+    }
+
+    /* Zig-zag fade-in animations */
+    .fade-in-left {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .fade-in-right {
+      opacity: 0;
+      transform: translateX(50px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .appear {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Miles Blanc Site</h1>
+  <nav>
+    <a href="#welcome">Welcome</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#connect">Connect</a>
+  </nav>
+</header>
+
+<!-- Welcome Section -->
+<section id="welcome" class="fade-in-left">
+  <h2>Welcome</h2>
+  <p>
+    Welcome to my site. I’m glad you stopped by!
+    My name is <strong>Miles Blanc</strong>, I am a computer technology senior at Bowie State University.
+    My four years as a proud <strong>Bulldog</strong> has been filled with growth, challenges, and experiences that have shaped me both personally and professionally.
+    During my time at Bowie I studied Computer Technology where I gained immense knowledge and worked on hands-on projects.
+    I’ve embraced every opportunity to learn, lead, and prepare for the next chapter of my career.
+  </p>
+</section>
+
+<!-- about Section -->
+<section id="about" class="fade-in-right">
+  <h2>About Me</h2>
+  <p>I am a focused, results-driven professional with strong communication, organizational, and time management skills. I bring a solid work ethic and a commitment to continuous learning, eager to contribute and grow within a dynamic, collaborative team environment.
+      During my time at Bowie I have worked on projects like Python scripts, managing databases in oracle, and creating a server admin environment in sandbox lab.
+
+  My journey reflects persistence, growth, and connecting technical skills to real-world interests.</p>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="fade-in-left">
+  <h2>Projects</h2>
+  <p>Click to view some of my work</p>
+  <ul>
+    <li>
+    <a href="https://github.com/milesblanc03/guess-the-word" target="_blank"
+         style="color: var(--purple); font-weight: bold; text-decoration: none;">
+        ABET guess the word game (Hangman)
+      </a>
+    </li>
+    <li>
+        <a href="https://github.com/milesblanc03/data-security-plan" target="_blank"
+         style="color: var(--purple); font-weight: bold; text-decoration: none;">
+        Data Security Plan (Risk Assessment & Controls)
+      </a>
+</li>
+  </ul>
+</section>
+
+<!-- Resume Section -->
+<section id="resume" class="fade-in-right">
+  <h2>My Resume</h2>
+  <p>
+    <a href="MilesBlanc_Resume.pdf" target="_blank">Click here to view or download my resume </a>
+  </p>
+
+
+    <p style="text-align:center; margin-top:30px;">Or scan this QR code to access it:</p>
+
+    <img src="newresume-qr.png" alt="Resume QR Code"
+         style="display:block; margin:0 auto; max-width:200px; border-radius:12px;">
+  </section>
+
+<!-- Connect Section -->
+<section id="connect" class="fade-in-left">
+  <h2>Connect with Me</h2>
+  <p style="text-align:center;">Check out my Github or keep in contact with me via Linkedin below:</p>
+  <div style="display:flex; justify-content:center; gap:40px; flex-wrap:wrap; margin-top:20px;">
+    <!-- GitHub -->
+    <a href="https://github.com/milesblanc03" target="_blank"
+       style="display:inline-block; padding:12px 25px; background:var(--purple);
+              color:#fff; font-weight:bold; border-radius:25px; text-decoration:none;
+              transition:transform 0.3s ease, box-shadow 0.3s ease;">
+      GitHub
+    </a>
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/miles-blanc-03b18a1a1/" target="_blank"
+       style="display:inline-block; padding:12px 25px; background:#0077b5;
+              color:#fff; font-weight:bold; border-radius:25px; text-decoration:none;
+              transition:transform 0.3s ease, box-shadow 0.3s ease;">
+      LinkedIn
+    </a>
+  </div>
+</section>
+<footer>
+  <p>© 2025 MB</p>
+</footer>
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="MilesPortfolioBot"
+  agent-id="a2a72733-8a92-4a50-a196-874f04895b6c"
+  language-code="en">
+</df-messenger>
+</body>
+</html>
+<script>
+  const faders = document.querySelectorAll('.fade-in-left, .fade-in-right');
+  const appearOptions = { threshold: 0.2 };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("appear");
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+</script>
